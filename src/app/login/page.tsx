@@ -206,8 +206,8 @@ export default function LoginPage() {
             boxShadow: "0 25px 50px rgba(0,0,0,0.4)",
           }}
         >
-          {mode === "login" ? (
-            <form onSubmit={handleLogin}>
+          {mode === "login" || mode === "signup" ? (
+            <form onSubmit={mode === 'signup' ? handleSignUp : handleLogin}>
               {/* Email */}
               <div style={{ marginBottom: "20px" }}>
                 <label
@@ -371,7 +371,6 @@ export default function LoginPage() {
               {/* Submit */}
               <button
                 type="submit"
-                onClick={mode === 'signup' ? handleSignUp : handleLogin}
                 disabled={loading}
                 style={{
                   width: "100%",
