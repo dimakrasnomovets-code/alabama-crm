@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { getIntegrationSettings } from "@/app/actions/settings";
 import { SettingsTabs } from "@/components/settings/SettingsTabs";
 

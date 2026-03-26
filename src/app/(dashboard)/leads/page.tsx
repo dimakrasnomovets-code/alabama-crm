@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { Users, Plus, Filter } from "lucide-react";
 import { ExportButton } from "@/components/leads/ExportButton";
 
