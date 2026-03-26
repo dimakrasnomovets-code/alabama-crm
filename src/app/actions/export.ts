@@ -51,7 +51,7 @@ export async function exportLeadsToCSV(filters?: any) {
     "County"
   ];
 
-  const rows = data.map(lead => [
+  const rows = data.map((lead: any) => [
     lead.lead_id,
     `"${lead.property_address?.replace(/"/g, '""')}"`,
     `"${lead.borrower_name?.replace(/"/g, '""') || ""}"`,
@@ -67,7 +67,7 @@ export async function exportLeadsToCSV(filters?: any) {
 
   const csvContent = [
     headers.join(","),
-    ...rows.map(row => row.join(","))
+    ...rows.map((row: any) => row.join(","))
   ].join("\n");
 
   return { csv: csvContent };
